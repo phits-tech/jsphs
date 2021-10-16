@@ -2,19 +2,17 @@ module.exports = {
   env: {
     es2021: true,
     node: true,
-    jest: true
+    jest: true,
   },
-  extends: [
-    'standard'
-  ],
+  extends: ['standard'],
+  ignorePatterns: ['node_modules', 'dist', 'lib'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 12,
-    sourceType: 'module'
+    sourceType: 'module',
   },
-  plugins: [
-    '@typescript-eslint'
-  ],
+  plugins: ['@typescript-eslint'],
   rules: {
-  }
+    'comma-dangle': ['error', 'only-multiline'],
+  },
 }
