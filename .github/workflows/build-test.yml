@@ -1,0 +1,36 @@
+name: Build, Test
+
+on:
+  pull_request:
+
+jobs:
+  Main:
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: 'Setup: Node'
+        uses: actions/setup-node@v1
+        with:
+          node-version: '15.x'
+
+      - name: 'Setup: Git checkout'
+        uses: actions/checkout@v2
+
+      - name: 'Setup: Copy cached deps'
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: ${{ runner.os }}-node-
+
+      - name: 'Setup: Install new deps'
+        run: cd jsphs6-for-vs-fp && npm ci --include=dev
+
+      - name: 'Build'
+        run: cd jsphs6-for-vs-fp && npm run build
+
+      - name: 'Lint'
+        run: cd jsphs6-for-vs-fp && npm run lint
+
+      - name: 'Test'
+        run: cd jsphs6-for-vs-fp && npm run test
