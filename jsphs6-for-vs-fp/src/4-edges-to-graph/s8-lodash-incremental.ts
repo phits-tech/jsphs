@@ -1,5 +1,5 @@
 import { GraphFunction } from './_.types'
-import { groupBy, mapValues } from 'lodash' // or lodash-es?!
+import { groupBy, mapValues } from 'lodash-es'
 
 export const graphLodashIncremental: GraphFunction = (edges: [string, string][]): Record<string, string[]> => {
   const edgesByFrom = groupBy(edges, ([from]) => from)
