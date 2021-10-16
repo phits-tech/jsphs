@@ -2,6 +2,10 @@ name: Build, Test
 
 on:
   pull_request:
+  push:
+    branches:
+      - main
+      - develop
 
 jobs:
   Main:
