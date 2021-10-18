@@ -12,6 +12,11 @@ export const maxFor: MaxFunction = (numbers: number[]): number | undefined => {
   return maxSoFar
 }
 
+/**
+ * Concept:
+ * 1. Add more condition on array members
+ * 2. Change the max holder to the first member of the array
+ */
 export const maxForOption2: MaxFunction = (numbers: number[]): number | undefined => {
   if (numbers.length === 0) return undefined
   if (numbers.length === 1) return numbers[0]
