@@ -28,13 +28,25 @@ jobs:
           restore-keys: ${{ runner.os }}-node-
 
       - name: 'Setup: Install new deps'
-        run: cd jsphs6-for-vs-fp && npm ci --include=dev
+        run: cd jsphs6-clean-code-part-1 && npm ci --include=dev
 
       - name: 'Build'
-        run: cd jsphs6-for-vs-fp && npm run build
+        run: cd jsphs6-clean-code-part-1 && npm run build
 
       - name: 'Lint'
-        run: cd jsphs6-for-vs-fp && npm run lint
+        run: cd jsphs6-clean-code-part-1 && npm run lint
 
       - name: 'Test'
-        run: cd jsphs6-for-vs-fp && npm run test
+        run: cd jsphs6-clean-code-part-1 && npm run test
+
+      - name: 'Setup: Install new deps'
+        run: cd jsphs7-clean-code-part-2 && npm ci --include=dev
+
+      - name: 'Build'
+        run: cd jsphs7-clean-code-part-2 && npm run build
+
+      - name: 'Lint'
+        run: cd jsphs7-clean-code-part-2 && npm run lint
+
+      - name: 'Test'
+        run: cd jsphs7-clean-code-part-2 && npm run test
