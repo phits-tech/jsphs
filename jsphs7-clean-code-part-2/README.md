@@ -23,3 +23,4 @@ Please check out:
 5. [Non-Empty URls](./src/5-non-empty-urls/README.md)
 6. [Sort by External](./src/6-sort-by-external/README.md)
 7. [Bounding Box](./src/7-bounding-box/README.md)
+8. [Recruitment Puzzle](./src/8-recruitment-puzzle/README.md)
