@@ -1,4 +1,4 @@
-# JS-PHS #6 - Clean Code: for vs FP
+# JS-PHS #6 - Clean Code: for vs FP vs...
 
 ## Summary
 

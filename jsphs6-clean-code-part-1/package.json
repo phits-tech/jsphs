@@ -1,9 +1,8 @@
 {
-  "name": "jsphs6-for-vs-fp",
+  "name": "jsphs6-clean-code-part-1",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
-  "author": "Charles Allen",
   "scripts": {
     "build": "tsc",
     "lint": "eslint . && prettier . --check",
